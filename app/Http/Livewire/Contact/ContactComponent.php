@@ -14,6 +14,7 @@ class ContactComponent extends Component
     protected $paginationTheme = 'bootstrap';
     protected $paginate;
 
+    public $readyToLoad = false; //Preloading
     public $data, $name, $phone, $selected_id, $prompt, $search;
     public $updateMode = false;
     public $spinner = false;
@@ -22,6 +23,10 @@ class ContactComponent extends Component
         'refreshParent' => '$refresh'
     ];
 
+    public function loadPosts()
+    {
+        $this->readyToLoad = true;
+    }
 
     public function hydrate(){
         $this->emit('loading');
@@ -48,7 +53,7 @@ class ContactComponent extends Component
         $this->spinner = false;
         //dd($this->paginate->items(), $this->page);
 
-        return view('livewire.contact.contact-component', ['paginate' => $this->paginate]);
+        return view('livewire.contact.contact-component', ['data' => $this->readyToLoad ? $this->data : [], 'paginate' => $this->paginate]);
     }
 
     private function resetInput()

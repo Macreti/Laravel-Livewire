@@ -59,15 +59,12 @@
             </div>
         </div>
     </div>
-    <div>
-        @if($spinner)
-            <div class="loader" id="loader-4">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        @else
-            <table class="table table-bordered table-condensed">
+    <div >
+        <div class="text-center" wire:loading.delay>
+            <x-load-component/>
+        </div>
+        <div wire:loading.remove>
+            <table  class="table table-bordered table-condensed">
                 <tr>
                     <td>ID</td>
                     <td>NAME</td>
@@ -88,7 +85,7 @@
                 @endforeach
             </table>
             {{ $paginate->links() }}
-        @endif
+        </div>
     </div>
 
     <style>
