@@ -1,8 +1,6 @@
-@extends('layouts.app')
+@extends('bower.admin_template')
 @section('content')
-<div class="container">
     <div class="row">
         <livewire:contact.contact-component />
     </div>
-</div>
 @endsection

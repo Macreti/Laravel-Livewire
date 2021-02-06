@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-Route::view('contacts','admin.contacts');
-Route::view('register-form', 'admin.register');
+Route::view('contacts','admin.contacts')->name('contacts');
+Route::view('register-form', 'admin.register')->name('register-form');
 Route::view('admin-bower', 'bower.admin_template');
