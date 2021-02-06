@@ -19,4 +19,3 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('contacts','admin.contacts');
 Route::view('register-form', 'admin.register');
-Route::view('admin-bower', 'bower.admin_template');
