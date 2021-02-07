@@ -33,6 +33,7 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ route("contacts") }}"><i class="fa fa-link"></i> <span>Contacts</span></a></li>
             <li><a href="{{ route("register-form") }}"><i class="fa fa-link"></i> <span>Register Form</span></a></li>
+            <li><a href="{{ route("trix-editor") }}"><i class="fa fa-link"></i> <span>Trix Editor</span></a></li>
             <li><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
             <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
             <li class="treeview">

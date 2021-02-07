@@ -19,4 +19,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('contacts','admin.contacts')->name('contacts');
 Route::view('register-form', 'admin.register')->name('register-form');
+Route::view('trix-editor', 'admin.trix')->name('trix-editor');
 Route::view('admin-bower', 'bower.admin_template');

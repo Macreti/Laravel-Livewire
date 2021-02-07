@@ -45,6 +45,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 
     @livewireStyles
+    @stack('styles')
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -94,6 +95,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- REQUIRED JS SCRIPTS -->
 @livewireScripts
+@stack('scripts')
 
 <!-- jQuery 3 -->
 <script src="{{ asset("/adminlte/bower_components/jquery/dist/jquery.min.js") }}"></script>
